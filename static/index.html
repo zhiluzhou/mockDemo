@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        h1{
+            color: #b2b2b2;
+        }
+    </style>
+</head>
+<body>
+    <h1>11111</h1>
+</body>
+<script>
+    $.ajax({
+        url: 'http://localhost:3000/index.js',
+        type: "GET",
+        dataType: 'json',
+        contentType:"application/json", 
+        success: function (data) {
+//        		data = JSON.parse(data);
+        		console.log('data',data);
+        },
+        error: function (data) {
+            console.log(data)
+        }
+    });
+</script>
+</html>
